@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/navbar";
 import "./globals.css";
+import { PlusIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/theme-toggle";
+import FooterColumns01 from "@/components/blocks/footer/footer-columns-01";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +31,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased container max-w-7xl mx-auto p-4`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar hideOnTopHome={true} />
+          {children}
+          {/* <ModeToggle /> */}
+          <FooterColumns01 />
+        </ThemeProvider>
       </body>
     </html>
   );
