@@ -100,15 +100,15 @@ const Recommendation = ({
           {filteredData && filteredData.length > 0 ? (
             filteredData.map((item, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/5">
-                <Link href={`/${encodeURIComponent(item.name)}`} className="">
-                  <Card className="flex flex-col h-full py-0">
+                <Link href={`/hunian/${encodeURIComponent(item.name)}`} className="">
+                  <Card className="flex flex-col h-full py-0 border-0">
                     {item.image && (
                       <Image
                         src={item.image}
                         alt={`${item.name} image`}
                         width={320}
                         height={160}
-                        className="w-full h-40 object-cover rounded-t-xl"
+                        className="w-full h-40 object-cover rounded-xl"
                       />
                     )}
                     <CardHeader className="px-2 gap-0">

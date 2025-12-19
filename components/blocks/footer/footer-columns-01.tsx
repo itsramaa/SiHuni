@@ -233,7 +233,7 @@ export default function FooterColumns01() {
 
             {/* Social Media */}
             <div className="space-y-2">
-              <p className="text-sm font-medium text-muted-foreground">Ikuti Kami</p>
+              <p className="text-sm font-medium text-muted-foreground text-end">Ikuti Kami</p>
               <div className="flex gap-2">
                 {SOCIAL_MEDIA.map(({ name, icon: Icon, href }) => (
                   <Button

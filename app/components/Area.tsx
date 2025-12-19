@@ -75,7 +75,7 @@ const Area = ({
                 .map((item, index) => (
                   <Card
                     key={index}
-                    className="relative flex flex-col h-32 md:h-40 lg:h-48 justify-center overflow-hidden py-0"
+                    className="relative flex flex-col h-32 md:h-40 lg:h-48 justify-center overflow-hidden py-0 border-0"
                   >
                     {item.image && (
                       <Image
@@ -94,7 +94,7 @@ const Area = ({
                   </Card>
                 ))}
               <Link href={`/lihat-semua`} className="">
-                <Card className="relative flex flex-col h-32 md:h-40 lg:h-48 justify-center items-center overflow-hidden py-0">
+                <Card className="relative flex flex-col h-32 md:h-40 lg:h-48 justify-center items-center overflow-hidden py-0 border-0">
                   <Button variant={"link"} size={"lg"}>
                     Lihat Semua <ChevronRight />
                   </Button>
